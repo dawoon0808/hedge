@@ -21,7 +21,9 @@ interface AssetDao {
     @Delete
     suspend fun delete(asset: Asset)
 
-    @Query("SELECT * FROM assets WHERE type = :typeId")
-    suspend fun getAssetById(typeId: String): Asset?
+    @Query("SELECT * FROM assets WHERE id = :id")
+    suspend fun getAssetById(id: Int): Asset?
 
+    @Query("SELECT * FROM assets ")
+    suspend fun getAllAssets():List<Asset>
 }

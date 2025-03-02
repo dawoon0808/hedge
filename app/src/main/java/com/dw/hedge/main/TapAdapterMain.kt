@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class TapAdapterMain(activity: AppCompatActivity): FragmentStateAdapter(activity) {
-    private val fragments = listOf(FragmentMain(), FragmentMain(),FragmentMain(),FragmentMain())
+    private val fragments = listOf(FragmentMain(), FragmentAssetList(),FragmentMain(),FragmentMain())
 
     override fun getItemCount(): Int = fragments.size
 
